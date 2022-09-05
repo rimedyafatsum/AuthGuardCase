@@ -1,0 +1,51 @@
+version: '3.4'
+
+services:
+  authguardcase.services.employee:
+    image: ${DOCKER_REGISTRY-}authguardcaseservicesemployee
+    volumes:
+      - ${HOME}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${HOME}/ASP.NET/Https:/root/.aspnet/https:ro
+    build:
+      context: .
+      dockerfile: Services/Employee/AuthGuardCase.Services.Employee/Dockerfile
+
+  authguardcase.identityserver4.authserver:
+    image: ${DOCKER_REGISTRY-}authguardcaseidentityserver4authserver
+    volumes:
+      - ${HOME}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${HOME}/ASP.NET/Https:/root/.aspnet/https:ro
+    build:
+      context: .
+      dockerfile: IdentityServer4/AuthGuardCase.IdentityServer4.AuthServer/Dockerfile
+
+
+  authguardcase.clients.client_1:
+    image: ${DOCKER_REGISTRY-}authguardcaseclientsclient1
+    volumes:
+      - ${HOME}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${HOME}/ASP.NET/Https:/root/.aspnet/https:ro
+    build:
+      context: .
+      dockerfile: Clients/AuthGuardCase.Clients.Client_1/Dockerfile
+
+
+  authguardcase.clients.client_2:
+    image: ${DOCKER_REGISTRY-}authguardcaseclientsclient2
+    volumes:
+      - ${HOME}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${HOME}/ASP.NET/Https:/root/.aspnet/https:ro
+    build:
+      context: .
+      dockerfile: Clients/AuthGuardCase.Clients.Client_2/Dockerfile
+
+
+  authguardcase.clients.client_3:
+    image: ${DOCKER_REGISTRY-}authguardcaseclientsclient3
+    volumes:
+      - ${HOME}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${HOME}/ASP.NET/Https:/root/.aspnet/https:ro
+    build:
+      context: .
+      dockerfile: Clients/AuthGuardCase.Clients.Client_3/Dockerfile
+

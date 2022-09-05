@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "HafpgxJqxDWgynX+8J1R8hAzKpdyOVc9JYGpnidtlTiYGj8TjlMEB+jNjcOqQxpCj5aif8KcrJJ/7kUc0Xdq0w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\musta\\source\\repos\\AuthGuardCase\\Clients\\AuthGuardCase.Clients.Client_2\\AuthGuardCase.Clients.Client_2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\musta\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
+  ],
+  "logs": []
+}

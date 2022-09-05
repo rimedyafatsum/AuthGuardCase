@@ -1,0 +1,129 @@
+services:
+  authguardcase.clients.client_1:
+    build:
+      context: C:\Users\musta\source\repos\AuthGuardCase
+      dockerfile: Clients/AuthGuardCase.Clients.Client_1/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: AuthGuardCase.Clients.Client_1
+      target: base
+    container_name: authguardcase-client-1
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: authguardcaseclientsclient1:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/AuthGuardCase.Clients.Client_1.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 18200
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\musta\source\repos\AuthGuardCase\Clients\AuthGuardCase.Clients.Client_1:/app:rw
+    - C:\Users\musta\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\musta\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\musta\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\musta\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\musta\source\repos\AuthGuardCase:/src:rw
+  authguardcase.clients.client_2:
+    build:
+      context: C:\Users\musta\source\repos\AuthGuardCase
+      dockerfile: Clients/AuthGuardCase.Clients.Client_2/Dockerfile
+    container_name: authguardcase-client-2
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: authguardcaseclientsclient2
+    ports:
+    - published: 18300
+      target: 80
+    volumes:
+    - /ASP.NET/Https:/root/.aspnet/https:ro
+    - /Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+  authguardcase.clients.client_3:
+    build:
+      context: C:\Users\musta\source\repos\AuthGuardCase
+      dockerfile: Clients/AuthGuardCase.Clients.Client_3/Dockerfile
+    container_name: authguardcase-client-3
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: authguardcaseclientsclient3
+    ports:
+    - published: 18400
+      target: 80
+    volumes:
+    - /ASP.NET/Https:/root/.aspnet/https:ro
+    - /Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+  authguardcase.identityserver4.authserver:
+    build:
+      context: C:\Users\musta\source\repos\AuthGuardCase
+      dockerfile: IdentityServer4/AuthGuardCase.IdentityServer4.AuthServer/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: AuthGuardCase.IdentityServer4.AuthServer
+      target: base
+    container_name: authguardcase-authserver
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: authguardcaseidentityserver4authserver:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/AuthGuardCase.IdentityServer4.AuthServer.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 18100
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\musta\source\repos\AuthGuardCase\IdentityServer4\AuthGuardCase.IdentityServer4.AuthServer:/app:rw
+    - C:\Users\musta\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\musta\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\musta\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\musta\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\musta\source\repos\AuthGuardCase:/src:rw
+  authguardcase.services.employee:
+    build:
+      context: C:\Users\musta\source\repos\AuthGuardCase
+      dockerfile: Services/Employee/AuthGuardCase.Services.Employee/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: AuthGuardCase.Services.Employee
+      target: base
+    container_name: authguardcase-employee
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: authguardcaseservicesemployee:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/AuthGuardCase.Services.Employee.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 18000
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\musta\source\repos\AuthGuardCase\Services\Employee\AuthGuardCase.Services.Employee:/app:rw
+    - C:\Users\musta\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\musta\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\musta\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Users\musta\.nuget\packages:/root/.nuget/packages:ro
+    - C:\Users\musta\source\repos\AuthGuardCase:/src:rw
+version: '3.4'

@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E68BA92D-2E5D-4E19-BBF2-CB44CD30FE4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Employee", "Employee", "{6618BF86-BC64-4D53-9EBD-79F3E3991C86}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthGuardCase.Services.Employee", "Services\Employee\AuthGuardCase.Services.Employee\AuthGuardCase.Services.Employee.csproj", "{F50FABA4-2A60-495A-A442-85F77A3111EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36EE341A-8730-4CE9-8B90-976AABFC063C}"
+	ProjectSection(SolutionItems) = preProject
+		Ports.txt = Ports.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{8D6BA1E2-8D65-466D-A2D7-CF57D08780CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthGuardCase.Shared", "Shared\AuthGuardCase.Shared\AuthGuardCase.Shared.csproj", "{258F5C86-6283-4593-A097-B9681ED2B1E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer4", "IdentityServer4", "{F5822A1D-8B69-485A-AD2F-5149D010446A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthGuardCase.IdentityServer4.AuthServer", "IdentityServer4\AuthGuardCase.IdentityServer4.AuthServer\AuthGuardCase.IdentityServer4.AuthServer.csproj", "{269E1801-4CD0-497A-AE6B-A2786DC88B6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{431375F5-6418-478C-A8DB-F3CDA19C9664}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthGuardCase.Clients.Client_1", "Clients\AuthGuardCase.Clients.Client_1\AuthGuardCase.Clients.Client_1.csproj", "{B3F2EF79-C72F-42F4-95D8-6EB89698C1EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthGuardCase.Clients.Client_2", "Clients\AuthGuardCase.Clients.Client_2\AuthGuardCase.Clients.Client_2.csproj", "{CD805E6A-5501-4672-9799-BE8BB1DC678F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthGuardCase.Clients.Client_3", "Clients\AuthGuardCase.Clients.Client_3\AuthGuardCase.Clients.Client_3.csproj", "{4AF64680-2581-4B95-8EBA-387BCF0E1833}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{766660B9-6E9A-4851-BBCB-D3C79BBC4A6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F50FABA4-2A60-495A-A442-85F77A3111EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F50FABA4-2A60-495A-A442-85F77A3111EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F50FABA4-2A60-495A-A442-85F77A3111EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F50FABA4-2A60-495A-A442-85F77A3111EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{258F5C86-6283-4593-A097-B9681ED2B1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{258F5C86-6283-4593-A097-B9681ED2B1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{258F5C86-6283-4593-A097-B9681ED2B1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{258F5C86-6283-4593-A097-B9681ED2B1E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{269E1801-4CD0-497A-AE6B-A2786DC88B6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{269E1801-4CD0-497A-AE6B-A2786DC88B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{269E1801-4CD0-497A-AE6B-A2786DC88B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{269E1801-4CD0-497A-AE6B-A2786DC88B6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3F2EF79-C72F-42F4-95D8-6EB89698C1EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3F2EF79-C72F-42F4-95D8-6EB89698C1EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3F2EF79-C72F-42F4-95D8-6EB89698C1EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3F2EF79-C72F-42F4-95D8-6EB89698C1EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD805E6A-5501-4672-9799-BE8BB1DC678F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD805E6A-5501-4672-9799-BE8BB1DC678F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD805E6A-5501-4672-9799-BE8BB1DC678F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD805E6A-5501-4672-9799-BE8BB1DC678F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF64680-2581-4B95-8EBA-387BCF0E1833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF64680-2581-4B95-8EBA-387BCF0E1833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF64680-2581-4B95-8EBA-387BCF0E1833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF64680-2581-4B95-8EBA-387BCF0E1833}.Release|Any CPU.Build.0 = Release|Any CPU
+		{766660B9-6E9A-4851-BBCB-D3C79BBC4A6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766660B9-6E9A-4851-BBCB-D3C79BBC4A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766660B9-6E9A-4851-BBCB-D3C79BBC4A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766660B9-6E9A-4851-BBCB-D3C79BBC4A6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6618BF86-BC64-4D53-9EBD-79F3E3991C86} = {E68BA92D-2E5D-4E19-BBF2-CB44CD30FE4C}
+		{F50FABA4-2A60-495A-A442-85F77A3111EE} = {6618BF86-BC64-4D53-9EBD-79F3E3991C86}
+		{258F5C86-6283-4593-A097-B9681ED2B1E8} = {8D6BA1E2-8D65-466D-A2D7-CF57D08780CF}
+		{269E1801-4CD0-497A-AE6B-A2786DC88B6B} = {F5822A1D-8B69-485A-AD2F-5149D010446A}
+		{B3F2EF79-C72F-42F4-95D8-6EB89698C1EC} = {431375F5-6418-478C-A8DB-F3CDA19C9664}
+		{CD805E6A-5501-4672-9799-BE8BB1DC678F} = {431375F5-6418-478C-A8DB-F3CDA19C9664}
+		{4AF64680-2581-4B95-8EBA-387BCF0E1833} = {431375F5-6418-478C-A8DB-F3CDA19C9664}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15CAFFF5-C2BD-42F5-975A-3E6B7E22F3E6}
+	EndGlobalSection
+EndGlobal

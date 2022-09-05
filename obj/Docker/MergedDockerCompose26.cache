@@ -1,0 +1,72 @@
+services:
+  authguardcase.clients.client_1:
+    build:
+      context: C:\Users\musta\source\repos\AuthGuardCase
+      dockerfile: Clients/AuthGuardCase.Clients.Client_1/Dockerfile
+    container_name: authguardcase-client-1
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: authguardcaseclientsclient1
+    ports:
+    - published: 18200
+      target: 80
+    volumes:
+    - /ASP.NET/Https:/root/.aspnet/https:ro
+    - /Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+  authguardcase.clients.client_2:
+    build:
+      context: C:\Users\musta\source\repos\AuthGuardCase
+      dockerfile: Clients/AuthGuardCase.Clients.Client_2/Dockerfile
+    container_name: authguardcase-client-2
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: authguardcaseclientsclient2
+    ports:
+    - published: 18300
+      target: 80
+    volumes:
+    - /ASP.NET/Https:/root/.aspnet/https:ro
+    - /Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+  authguardcase.clients.client_3:
+    build:
+      context: C:\Users\musta\source\repos\AuthGuardCase
+      dockerfile: Clients/AuthGuardCase.Clients.Client_3/Dockerfile
+    container_name: authguardcase-client-3
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: authguardcaseclientsclient3
+    ports:
+    - published: 18400
+      target: 80
+    volumes:
+    - /ASP.NET/Https:/root/.aspnet/https:ro
+    - /Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+  authguardcase.identityserver4.authserver:
+    build:
+      context: C:\Users\musta\source\repos\AuthGuardCase
+      dockerfile: IdentityServer4/AuthGuardCase.IdentityServer4.AuthServer/Dockerfile
+    container_name: authguardcase-authserver
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: authguardcaseidentityserver4authserver
+    ports:
+    - published: 5001
+      target: 80
+    volumes:
+    - /ASP.NET/Https:/root/.aspnet/https:ro
+    - /Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+  authguardcase.services.employee:
+    build:
+      context: C:\Users\musta\source\repos\AuthGuardCase
+      dockerfile: Services/Employee/AuthGuardCase.Services.Employee/Dockerfile
+    container_name: authguardcase-employee
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: authguardcaseservicesemployee
+    ports:
+    - published: 5011
+      target: 80
+    volumes:
+    - /ASP.NET/Https:/root/.aspnet/https:ro
+    - /Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

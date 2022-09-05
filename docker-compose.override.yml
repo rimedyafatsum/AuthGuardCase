@@ -1,0 +1,37 @@
+version: '3.4'
+
+services:
+  authguardcase.services.employee:
+    container_name: authguardcase-employee
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5011"
+
+  authguardcase.identityserver4.authserver:
+    container_name: authguardcase-authserver
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5001"
+
+  authguardcase.clients.client_1:
+    container_name: authguardcase-client-1
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "18200:80"
+
+  authguardcase.clients.client_2:
+    container_name: authguardcase-client-2
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "18300:80"
+
+  authguardcase.clients.client_3:
+    container_name: authguardcase-client-3
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "18400:80"
